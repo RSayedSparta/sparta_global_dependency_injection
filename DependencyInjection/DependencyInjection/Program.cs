@@ -10,15 +10,31 @@ namespace DependencyInjection
     {
         static void Main(string[] args)
         {
+            Amazon amazon = initalise.amazonInit();
+            amazon.AddToBasket();
+            amazon.MonthlySub();
+            amazon.SaveItem();
+            double cost = amazon.Cost;
+            Console.WriteLine("Your current monthly amazon cost is " + cost);
+            Console.ReadKey();
 
+            Netflix netflix = initalise.netflixInit();
+            netflix.WatchContent();
         }
     }
 
     class initalise
     {
-        static public void amazonInit()
+        static public Amazon amazonInit()
         {
-            Amazon amazon = new Amazon();
+            Amazon amazonNew = new Amazon();
+            return amazonNew;
+        }
+
+        static public Netflix netflixInit()
+        {
+            Netflix netflixNew = new Netflix();
+            return netflixNew;
         }
     }
 
@@ -26,7 +42,7 @@ namespace DependencyInjection
     {
         void BuyItem();
 
-        void SaveItem();
+        List<string> SaveItem();
 
         void AddToBasket();
     }
@@ -51,17 +67,29 @@ namespace DependencyInjection
 
     class Amazon : Service, IOnlineShop
     {
+        double _cost = 0;
+
+        public double Cost { get => _cost; set => _cost = value; }
+
+        List<string> products = new List<string>();
+
+
         public void MonthlySub()
         {
+            _cost += 8.99;
             Console.WriteLine("You have subscribed to prime");
+             
+        }
+
+        public List<string> SaveItem()
+        {
+            Console.WriteLine("Please enter a product");
+            string newProd = Console.ReadLine();
+            products.Add(newProd);
+            return products;
         }
 
         public void BuyItem()
-        {
-            Console.WriteLine("");
-        }
-
-        public void SaveItem()
         {
 
         }
@@ -71,4 +99,24 @@ namespace DependencyInjection
 
         }
     }
+
+    class Netflix : IStream, ISubscription
+    {
+        double _cost = 0;
+        public double Cost { get => _cost; set => _cost = value; }
+
+        public void MonthlySub()
+        {
+            Console.WriteLine("You have subscribed to Netflix");
+            _cost += 5.99;
+        }
+
+        public void WatchContent()
+        {
+            Console.WriteLine("Enter what you want to watch");
+            string watch = Console.ReadLine();
+            Console.WriteLine("You are now watching " + watch);
+        }
+    }
+
 }

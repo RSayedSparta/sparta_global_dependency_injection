@@ -1,0 +1,7 @@
+C:\Users\Tech-W70a\Engineering26\week6\Day1\sparta_global_dependency_injection\DependencyInjection\DependencyInjection\bin\Debug\DependencyInjection.exe.config
+C:\Users\Tech-W70a\Engineering26\week6\Day1\sparta_global_dependency_injection\DependencyInjection\DependencyInjection\bin\Debug\DependencyInjection.exe
+C:\Users\Tech-W70a\Engineering26\week6\Day1\sparta_global_dependency_injection\DependencyInjection\DependencyInjection\bin\Debug\DependencyInjection.pdb
+C:\Users\Tech-W70a\Engineering26\week6\Day1\sparta_global_dependency_injection\DependencyInjection\DependencyInjection\obj\Debug\DependencyInjection.csprojAssemblyReference.cache
+C:\Users\Tech-W70a\Engineering26\week6\Day1\sparta_global_dependency_injection\DependencyInjection\DependencyInjection\obj\Debug\DependencyInjection.csproj.CoreCompileInputs.cache
+C:\Users\Tech-W70a\Engineering26\week6\Day1\sparta_global_dependency_injection\DependencyInjection\DependencyInjection\obj\Debug\DependencyInjection.exe
+C:\Users\Tech-W70a\Engineering26\week6\Day1\sparta_global_dependency_injection\DependencyInjection\DependencyInjection\obj\Debug\DependencyInjection.pdb
